@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ddd;
+    position: relative;
+    height: 100vh;
+    /* margin-left: 20%; */
+  }
+
+  .logo{
+      font-size: 19px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: white;
+      font-family: "Playwrite VN", serif;
+       /* Light */
+      font-style: normal;
+      z-index: 3;
+      margin-left: 10px;
+      margin-top: 10px;
+      position: fixed;
+    }
+  
+    .sidenav {
+      width: 13%;
+      /* border-right: 1px solid #ddd; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      position: relative;
+  
+   height: 100vh;
+    }
+
+  .message_con{
+    margin-left: 20%;
+  }
+
+  .profile_new1{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .profile_pic2{
+     height: 100px;
+     width: 100px;
+     border-radius: 50%;
+     margin-left: 80%;
+     padding: 20px;
+  }
+  .text_con_in{
+    border: solid grey 1px;
+    border-radius: 30px;
+    width: 80%;
+    height: 50px;
+    margin-left: 19%;
+    position: relative;
+    bottom: -500px;
+    color: #ddd;
+    font-size: 15px;
+  }
+
+  /* chap gpt */
+
+  .message-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    background-color: #181818;
+    width: 930px;
+    margin-left: 60%;
+    /* width: 90%;
+    margin-left: 20%; */
+  }
+  
+
+  .profile-info{
+    position: absolute;
+    top: 60px;
+  }
+  .messages-list {
+    flex-grow: 1;
+    height: 100px;
+    overflow-y: auto;
+    padding: 10px;
+    margin-bottom: 500px;
+   width: 100%;
+  }
+
+  .message-input{
+
+    margin-left: 50%;
+    position: absolute;
+  }
+  .message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 60%;
+    margin-left: 20%;
+  }
+  
+  .message.received {
+    background-color: #e5e5e5;
+    align-self: flex-end;
+    color: white;
+    width: 100px;
+    margin-left: 990px;
+  }
+  
+  .message.send {
+    background-color: #0095f6;
+    align-self: flex-start;
+    color: white;
+    width: 100px;
+  }
+  
+  .message-input {
+    display: flex;
+    gap: 10px;
+    background-color: #0095f6;
+   margin-bottom: 200px;
+   width: 50%;
+   margin-left: 30%;
+  }
+
+  
+  .message-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #ddd;
+  }
+  
+  .message-input button {
+    padding: 10px 20px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup-content_messagers{
+    margin-left: 300px;
+    width: 100px;
+  }
+
+  .second_container{
+    position: absolute;
+    top: 10px;
+    
+  }
+
+  .message-input{
+    position: absolute;
+    bottom: 0;
+  }
+
+  /* display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px;
+  background-color: #181818;
+  
+  margin-left: 60%; */
+.message-container_new{
+}
+  /*gpt css*/
+
+
+.profile-pic_following{
+  height: 100px;
+  width: 100px;
+}  
+  
+
+.profile_pic3{
+  height: 150px;
+  width: 150px;
+ border-radius: 50%;
+
+}
+  
+.profile_new1{
+ background-color: aqua;
+ position: absolute;
+ top: 0;
+ right: 100px;
+}
+
+.profile-pic2_box{
+  position: absolute;
+ top: 50px;
+ right: 100px;
+}
+
+.message-input{
+  position: fixed;
+  bottom: -150px;
+  right: 100px;
+  width: 500px;
+}
+
+/* .popup-content_messagers{
+  position: absolute;
+  bottom: 10px;
+z-index: 1000px;
+} */

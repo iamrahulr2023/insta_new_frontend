@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    color: black;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: black;
+  }
+  
+  .left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .phone-preview {
+    max-height: 500px;
+    object-fit: contain;
+  }
+  
+  .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .form-box {
+    background-color: #1c1c1c;
+    padding: 30px;
+   
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); */
+    background-color: #000;
+    border: solid grey 1px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .forml{
+    padding: 20px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .forml input{
+    color: #fff;
+    padding: 10px 46px 10px 46px;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 5px;
+    
+  }
+  .logo {
+    font-family: "Billabong", sans-serif;
+    font-size: 36px;
+    margin-bottom: 200px;
+  }
+
+  .loo{
+    font-family: "Billabong", sans-serif;
+    font-size: 36px;
+    color: white;
+  }
+  
+  .login-button,
+  .facebook-login {
+    width: 100%;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .divider {
+    margin: 15px 0;
+    color: #aaa;
+    font-size: 12px;
+  }
+  
+  .facebook-login {
+    margin-top: 20px;
+    background-color: #4267b2;
+  }
+  
+  .forgot-password {
+    display: block;
+    margin-top: 10px;
+    color: #0095f6;
+    text-decoration: none;
+  }
+  
+  .signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+    border: solid grey 1px;
+    padding: 25px 77px 25px 77px;
+  }
+  
+  .signup-link a {
+    color: #0095f6;
+    text-decoration: none;
+
+  }
+  
+
+  .res{
+    color: red;
+    font-size: 10px;
+  }

@@ -1,0 +1,218 @@
+ 
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #ddd;
+      background-color: #ddd;
+  
+    }
+  
+  
+    .main {
+      display: flex;
+      height: 100vh;
+    }
+    
+   
+    .sidenav {
+      width: 13%;
+      /* border-right: 1px solid #ddd; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      position: relative;
+   
+    }
+      
+    .navs{
+   
+      left: 5px;
+      margin-top: 26px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    z-index: 1;
+    position: fixed;
+    border-right: solid gray 1px;
+  
+    }
+    .logo {
+      font-size: 19px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: white;
+      font-family: "Playwrite VN", serif;
+       /* Light */
+      font-style: normal;
+      z-index: 3;
+      margin-left: 10px;
+      margin-top: 10px;
+      position: fixed;
+      
+    }
+  
+    
+    
+    .navs ul {
+      list-style: none;
+      padding: 30px;
+      /* margin-bottom: 40px; */
+    }
+    
+     .navs li {
+      margin: 15px 0;
+      font-size: 15px;
+      cursor: pointer;
+      color: #ddd;
+      border-radius: 8px; 
+      padding: 8px 40px 8px 10px; 
+      transition: background-color 0.3s ease; 
+     font-weight: 549;
+    }
+   
+    .stats_pf{
+      display: flex;
+      gap: 30px;
+      margin-bottom: 100px;
+      position: absolute;
+      top: 110px;
+  flex-direction: row;
+   left: -60px;
+      margin-left: 60px;
+    }
+    
+    .navs li:hover {
+      background-color: #333;
+      
+    }
+    
+     .hicon{
+      margin-right: 15px;
+      font-size: 21px;
+     }
+  
+  .heart{
+      font-size: 24px;
+      margin-right: 15px;
+  }
+  
+   .reels{
+      font-size: 24px;
+   }
+  
+  
+   .playwrite-vn-light {
+      font-family: "Playwrite VN", serif;
+      font-weight: 100; /* Light */
+      font-style: normal;
+      color: #ddd;
+    }
+  
+    .bottom_navs {
+      text-align: center;
+      color: #ddd;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-right: 70px;
+      position: fixed;
+      bottom: 0;
+    }
+    
+    .bottom_navs button {
+      background-color: #0095f6;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+  
+    }
+    
+    .threads{
+      padding: 10px 3px 10px 10px;
+      border-radius: 15px;
+      /* position: absolute; */
+      bottom: 75px;
+      left: 6px;
+      position: fixed;
+      left: 30px;
+    }
+    .more{
+      margin-right: 1px;
+      padding: 10px 3px 10px 5px;
+      border-radius: 15px;
+      /* position: absolute; */
+      bottom: 15px;
+      
+      position: fixed;
+      left: 35px;
+    }
+    
+    .threads:hover{
+      background-color: #333;
+    }
+
+    .more:hover{
+      background-color: #333;
+    }
+
+    .profile_pic_me_f{
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      margin-top: 80%;
+      position: absolute;
+      top: 90px;
+      left: -40px;
+    }
+
+    .profile{
+      margin-left: 50%;
+
+    }
+
+    .posts_section{
+
+      margin-right: 1000px;
+      display: flex;
+      justify-content: center;
+      margin-top: 290px;
+      font-size: 12px;
+      gap: 25px;
+    }
+    .profile-header{
+      position: absolute;
+      left: 0;
+    }
+
+    .profile-info{
+      display: flex;
+      gap: 20px;
+    }
+
+    .posts_section{
+      width: 300px;
+      padding: 10px;
+      margin-right: 100px;
+    }
+
+    .posts_line_p{
+      position: absolute;
+      top: 300px;
+        border-bottom: solid grey 1px;
+        width: 900px;
+        margin-left: -290px;
+    }
+
+    .content{
+      margin-left: 140px;
+    }
