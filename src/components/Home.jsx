@@ -2961,10 +2961,11 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import pro_img from "C:/Users/Home/Desktop/route/Inten_project/insta/src/assets/insta_pro.jpg";
+// import pro_img from "C:/Users/Home/Desktop/route/Inten_project/insta/src/assets/insta_pro.jpg";
+import pro_img from "insta/src/assets/insta_pro.jpg";
 import { motion } from "framer-motion";
 import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
-import pro_img2 from "C:/Users/Home/Desktop/route/Inten_project/insta/src/assets/insta_pro.jpg";
+import pro_img2 from "insta/src/assets/insta_pro.jpg";
 const Home = ({ Getid }) => {
   const location = useLocation();
   const { id } = location.state || {};
