@@ -2086,12 +2086,12 @@ import { FaThreads } from "react-icons/fa6";
 import { HiBars3 } from "react-icons/hi2";
 import { useParams } from "react-router-dom";
 import { faIdBadge, faFilm } from "@fortawesome/free-solid-svg-icons";
-import pro_img from "insta/src/assets/insta_pro.jpg";
+import pro_img from "C:/Users/Home/Desktop/route/Inten_project/insta/src/assets/insta_pro.jpg";
 import { motion } from "framer-motion";
 import { LuMessageCircle } from "react-icons/lu";
 import { LuSend } from "react-icons/lu";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
-import img_upload from "insta/src/assets/insta_pro.jpg";
+import img_upload from "C:/Users/Home/Desktop/route/Inten_project/insta/src/assets/Screenshot 2025-01-30 114823.png";
 const Profile = () => {
   const { id } = useParams();
   const [profilePic, setProfilePic] = useState(null);
