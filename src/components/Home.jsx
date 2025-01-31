@@ -2945,7 +2945,6 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as faSolidHeart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as faRegularHeart } from "@fortawesome/free-regular-svg-icons";
-import image from "C:/Users/Home/Desktop/InPlant_training_2025/backend_pratise/server/Inten_project/insta/src/assets/Screenshot 2025-01-20 223303.png";
 
 import { PiFilmStripFill } from "react-icons/pi";
 import { BiMessageRoundedCheck } from "react-icons/bi";
@@ -2962,10 +2961,10 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import pro_img from "C:/Users/Home/Desktop/InPlant_training_2025/backend_pratise/server/Inten_project/insta/src/assets/insta_default_img.webp";
+import pro_img from "C:/Users/Home/Desktop/route/Inten_project/insta/src/assets/insta_pro.jpg";
 import { motion } from "framer-motion";
 import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
-import pro_img2 from "C:/Users/Home/Desktop/InPlant_training_2025/backend_pratise/server/Inten_project/insta/src/assets/Screenshot 2025-01-20 223303.png";
+import pro_img2 from "C:/Users/Home/Desktop/route/Inten_project/insta/src/assets/insta_pro.jpg";
 const Home = ({ Getid }) => {
   const location = useLocation();
   const { id } = location.state || {};

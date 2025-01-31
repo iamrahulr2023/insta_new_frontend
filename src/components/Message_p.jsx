@@ -352,7 +352,7 @@ import { useParams } from "react-router-dom";
 import { faIdBadge, faFilm } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import pro_img from "C:/Users/Home/Desktop/InPlant_training_2025/backend_pratise/server/Inten_project/insta/src/assets/insta_default_img.webp";
+import pro_img from "C:/Users/Home/Desktop/route/Inten_project/insta/src/assets/insta_pro.jpg";
 import { motion } from "framer-motion";
 
 const Message_p = () => {
