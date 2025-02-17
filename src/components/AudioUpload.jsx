@@ -1,114 +1,3 @@
-// import React, { useState } from "react";
-// import axios from "axios";
-
-// const AudioUpload = () => {
-//   const [audioFile, setAudioFile] = useState(null);
-//   const [title, setTitle] = useState("");
-//   const [audioList, setAudioList] = useState([]);
-//   const [selectedAudio, setSelectedAudio] = useState(null);
-
-//   // Handle file upload
-//   const handleUpload = async (e) => {
-//     e.preventDefault();
-//     const formData = new FormData();
-//     formData.append("audio", audioFile);
-//     formData.append("title", title);
-  
-//     try {
-//       const response = await axios.post("http://localhost:3000/upload-audio", formData, {
-//         headers: { "Content-Type": "multipart/form-data" },
-//       });
-  
-//       // Check response for the ID
-//       if (response.data.id) {
-//         alert(response.data.message);
-//         const newAudio = { id: response.data.id, title };
-//         setAudioList((prevList) => [...prevList, newAudio]);
-//       } else {
-//         alert("Error: Missing ID in response");
-//       }
-  
-//       setTitle("");
-//       setAudioFile(null);
-//     } catch (err) {
-//       console.error(err);
-//       alert("Error uploading audio");
-//     }
-//   };
-  
-
-//   // Play audio
-
-//  const playAudio = async (id) => {
-//   if (!id) {
-//     alert("Invalid audio ID");
-//     return;
-//   }
-
-//   try {
-//     const response = await axios.get(`http://localhost:3000/audio/${id}`, {
-//       responseType: 'blob', // Expect a binary response
-//     });
-
-//     const audioUrl = URL.createObjectURL(response.data); // Convert blob to URL
-//     setSelectedAudio(audioUrl);
-//   } catch (err) {
-//     console.error(err); // Log the error for debugging
-//     alert("Error fetching audio");
-//   }
-// };
-
-
-//   return (
-//     <div>
-//       <h1>Audio Uploader and Player</h1>
-
-//       {/* Audio Upload Form */}
-//       <form onSubmit={handleUpload}>
-//         <div>
-//           <label>Title:</label>
-//           <input
-//             type="text"
-//             value={title}
-//             onChange={(e) => setTitle(e.target.value)}
-//             required
-//           />
-//         </div>
-//         <div>
-//           <label>Audio File:</label>
-//           <input
-//             type="file"
-//             accept="audio/*"
-//             onChange={(e) => setAudioFile(e.target.files[0])}
-//             required
-//           />
-//         </div>
-//         <button type="submit">Upload Audio</button>
-//       </form>
-
-//       {/* Audio Player */}
-//       <h2>Audio List</h2>
-//       <ul>
-//         {audioList.map((audio, index) => (
-//           <li key={index}>
-//             {audio.title}{" "}
-//             <button onClick={() => playAudio(audio.id)}>Play</button>
-//           </li>
-//         ))}
-//       </ul>
-
-//       {/* Selected Audio Player */}
-//       {selectedAudio && (
-//         <audio controls src={selectedAudio}></audio>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default AudioUpload;
-
-
-
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -127,7 +16,7 @@ const AudioUpload = () => {
     formData.append("title", title);
   
     try {
-      const response = await axios.post("http://localhost:3000/upload-audio", formData, {
+      const response = await axios.post("https://insta-server-3e4p.onrender.com/upload-audio", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
   
@@ -157,7 +46,7 @@ const AudioUpload = () => {
     }
 
     try {
-      const response = await axios.get(`http://localhost:3000/audio/${id}`, {
+      const response = await axios.get(`https://insta-server-3e4p.onrender.com/audio/${id}`, {
         responseType: "blob", // Expect binary data
       });
 

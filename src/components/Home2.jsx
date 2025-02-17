@@ -1,6 +1,3 @@
-
-
-
 import React from "react";
 import { useState } from "react";
 import "./Home.css";
@@ -62,7 +59,7 @@ const Home = ({Getid}) => {
   const current_user= id;
   const fetchProfileData = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/profile_data/${id}`);
+      const response = await axios.get(`https://insta-server-3e4p.onrender.com/api/profile_data/${id}`);
       
       if (response.data.profilePic) {
         const { contentType, imageData } = response.data.profilePic;
@@ -87,7 +84,7 @@ const Home = ({Getid}) => {
 
   const fetch_all_profiles = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/all_profile_data");
+      const response = await axios.get("https://insta-server-3e4p.onrender.com/api/all_profile_data");
       console.log("Fetched users:", response.data); // Ensure _id is present
       setUsers(response.data);
     } catch (error) {
@@ -105,7 +102,7 @@ const Home = ({Getid}) => {
     }
   
     try {
-      const response = await axios.post("http://localhost:3000/api/follow", {
+      const response = await axios.post("https://insta-server-3e4p.onrender.com/api/follow", {
         followerId: id, // Current logged-in user's MongoDB `_id`
         followingId: userIdss, // The MongoDB `_id` of the user to follow
       });
@@ -132,7 +129,7 @@ const Home = ({Getid}) => {
 
   const fetchLatestPosts = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/latest_posts");
+      const response = await axios.get("https://insta-server-3e4p.onrender.com/api/latest_posts");
       console.log("Fetched latest posts:", response.data);
       setLatestPosts(response.data);
     } catch (error) {
@@ -179,7 +176,7 @@ const Home = ({Getid}) => {
     const isLiked = likedPosts[postId]?.liked;
   
     try {
-      const response = await axios.post(`http://localhost:3000/api/posts/${postId}/like`, {
+      const response = await axios.post(`https://insta-server-3e4p.onrender.com/api/posts/${postId}/like`, {
         userId: id, // Current user ID
         likeAction: !isLiked, // Pass whether the like action is adding or removing
       });
@@ -268,7 +265,7 @@ const handleKeyPress = async (e, postid) => {
 
     try {
       // Post to backend
-      await axios.post(`http://localhost:3000/api/posts/${postid}/commands`, {
+      await axios.post(`https://insta-server-3e4p.onrender.com/api/posts/${postid}/commands`, {
         userId: id, // Current user ID
         command: commandToAdd, // The new command to add
       });
@@ -644,30 +641,3 @@ const handleKeyPress = async (e, postid) => {
 };
 
 export default Home;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
