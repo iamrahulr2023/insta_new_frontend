@@ -38,6 +38,9 @@ body {
     margin-left: 20%;
   }
 
+  .messages-lst{
+    padding-bottom: 200px;
+  }
   .profile_new1{
     display: flex;
     justify-content: center;
@@ -104,20 +107,80 @@ body {
   }
   
   .message.received {
-    background-color: #e5e5e5;
+    background-color: blue;
+    border-radius: 50px;  /* Keeps it rounded */
     align-self: flex-end;
     color: white;
-    width: 100px;
-    margin-left: 990px;
-  }
+    margin-left: 1290px;
+    width: auto;  /* Adjusts to text */
+    padding: 10px 15px;  /* Adds space inside */
+    display: inline-block;  /* Wraps around content */
+    max-width: 60%; /* Prevents it from being too wide */
+    text-align: center; /* Centers the text */
+}
+
+.message.receivedt{
+  margin-left: 1290px;
+
+}
+
+
+
+.profile-info_mess2{
+  /* margin-left: -800px; */
+  position: absolute;
+  right: 300px;
+  top: 200px;
+}
+
   
+  .mess{
+    background-color: blue;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+  }
   .message.send {
     background-color: #0095f6;
     align-self: flex-start;
     color: white;
     width: 100px;
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 0;
   }
   
+
+  .message.sent {
+    background-color: blue;
+    border-radius: 50px;  /* Keeps it rounded */
+    align-self: flex-end;
+    color: white;
+    margin-left: 650px;
+    z-index: 2000;
+    width: auto;  /* Adjusts to text */
+    padding: 10px 15px;  /* Adds space inside */
+    display: inline-block;  /* Wraps around content */
+    max-width: 60%; /* Prevents it from being too wide */
+    text-align: center; /* Centers the text */
+  }
+
+  .message.sentt{
+    margin-left: 1050px;
+  display: inline-block;
+  position: absolute;
+  left: -250px;
+  }
+
+  .mes_box_con{
+   margin-top: 300px;
+  }
+
+  
+
   .message-input {
     display: flex;
     gap: 10px;
@@ -131,23 +194,26 @@ body {
   .message-input input {
     flex-grow: 1;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 20px;
     border: 1px solid #ccc;
     color: #ddd;
+
   }
   
   .message-input button {
     padding: 10px 20px;
-    background-color: #0095f6;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    width: -100px;
   }
+
   
   .popup-content_messagers{
     margin-left: 300px;
     width: 100px;
+    /* position: fixed; */
   }
 
   .second_container{
@@ -161,6 +227,8 @@ body {
     bottom: 0;
   }
 
+
+
   /* display: flex;
   flex-direction: column;
   height: 100vh;
@@ -168,8 +236,7 @@ body {
   background-color: #181818;
   
   margin-left: 60%; */
-.message-container_new{
-}
+
   /*gpt css*/
 
 
@@ -180,10 +247,10 @@ body {
   
 
 .profile_pic3{
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 120px;
  border-radius: 50%;
-
+margin-top: 20px;
 }
   
 .profile_new1{
@@ -206,6 +273,45 @@ body {
   width: 500px;
 }
 
+.following-list{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 100px;
+
+}
+
+.name_and_pro{
+  height: 100vh;
+  width: 1px;
+  background-color: grey;
+  position: absolute;
+  margin-left: 300px;
+  z-index: 999;
+  top: 0;
+}
+.profile-pic_following{
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+}
+
+.name_of_f{
+  color: white;
+  text-decoration: none;
+}
+
+.following-item{
+  display: flex;
+  gap: 20px;
+}
+
+.following-item{
+padding-bottom: 5px;
+border-bottom: solid 1px grey;
+width: 300px;
+margin-right: 20%;
+}
 /* .popup-content_messagers{
   position: absolute;
   bottom: 10px;

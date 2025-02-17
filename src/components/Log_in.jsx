@@ -55,7 +55,7 @@ function Log_in() {
   };
 
   return (
-    <div className="login-container">
+    <div  className="login-container">
       {/* <div className="left-section">
         <img
           src="https://via.placeholder.com/3000" // Replace with actual image source
@@ -63,8 +63,8 @@ function Log_in() {
           className="phone-preview"
         />
       </div> */}
-      <div className="right-section">
-        <div className="form-box">
+      <div  className="right-section">
+        <div  className="form-box">
           <h1 className="loo">Instagram</h1>
           <form className="forml" onSubmit={handleSubmit}>
             <input

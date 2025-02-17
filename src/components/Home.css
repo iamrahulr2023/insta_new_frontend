@@ -641,3 +641,142 @@ padding: 10px;
 width: 400px;
 margin-top: 30px;
 }
+
+/* stories popo up*/
+
+
+.popup-overlay_new {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-container_new {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.popup-title_new {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.file-upload-container_new {
+  border: 2px dashed #dbdbdb;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.img_upcon {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 12px;
+}
+
+.img_up {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.popup-file-input_new,
+.popup-audio-input_new {
+  margin-bottom: 12px;
+}
+
+.popup-text-input_new {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.popup-close-btn_new {
+  width: 100%;
+  background: #0095f6;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.popup-close-btn_new:hover {
+  background: #0081d6;
+}
+.profile-pic_story{
+  border-radius: 50%;
+  border: solid 2px red;
+}
+
+.stories{
+  display: flex;
+  position: relative;
+  z-index: 2000;
+  height: 100px;
+  width: 100%;
+  justify-content:center;
+  /* flex-direction: row;
+  width: 500px;
+  height: 100px; */
+}
+.story{
+  display: inline-block;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+height: 50px;
+width: 35%;
+
+}
+
+
+.storyname{
+  width: 60px;
+  overflow: hidden;
+}
+
+.search_body{
+  height:100vh;
+  width: 30%;
+  background-color: black;
+  position: fixed;
+  top: 0%;
+  left:70px;
+  z-index: 9000;
+  border-radius: 15px;
+  border-right: solid 2px grey;
+  overflow-y: scroll;
+}
+
+
+.closesearch{
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background-color: black;
+  font-size: 25px;
+  color: white;
+}
+
+.lines{
+  position: absolute;
+  top: 185px;
+  left: 0;
+}
