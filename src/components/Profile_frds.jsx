@@ -18,7 +18,7 @@ import { useParams } from "react-router-dom";
 import { faIdBadge, faFilm } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import pro_img from "C:/Users/Home/Desktop/route/Inten_project/insta/src/assets/insta_pro.jpg";
+import pro_img from "../assets/insta_pro.jpg";
 
 const Profile_frds = () => {
   const { id, loginid } = useParams();
