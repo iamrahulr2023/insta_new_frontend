@@ -48,7 +48,7 @@ const Upload = () => {
         setError(null);
     
         try {
-          const response = await axios.post(`http://localhost:3000/api/upload_reel/${id}`, formData, {
+          const response = await axios.post(`https://insta-server-3e4p.onrender.com/api/upload_reel/${id}`, formData, {
             headers: { 'Content-Type': 'multipart/form-data' },
           });
     

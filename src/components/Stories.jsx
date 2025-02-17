@@ -1,4 +1,4 @@
-4; // import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 // import axios from "axios";
 
 // const Stories = () => {
@@ -12,7 +12,7 @@
 //     // Fetch the user's stories from the backend
 //     const fetchStories = async () => {
 //       try {
-//         const response = await axios.get(`http://localhost:3000/api/getStories/${userId}`);
+//         const response = await axios.get(`https://insta-server-3e4p.onrender.com/api/getStories/${userId}`);
 //         setStories(response.data.stories);
 //       } catch (error) {
 //         console.error("Error fetching stories:", error);
@@ -31,7 +31,7 @@
 //     formData.append("audio", audioFile);
 
 //     try {
-//       await axios.post(`http://localhost:3000/api/upload_stories/${userId}`, formData, {
+//       await axios.post(`https://insta-server-3e4p.onrender.com/api/upload_stories/${userId}`, formData, {
 //         headers: { "Content-Type": "multipart/form-data" },
 //       });
 //       alert("Post uploaded successfully!");
@@ -132,7 +132,7 @@
 //     // Fetch the user's stories from the backend
 //     const fetchStories = async () => {
 //       try {
-//         const response = await axios.get(`http://localhost:3000/api/getStories/${userId}`);
+//         const response = await axios.get(`https://insta-server-3e4p.onrender.com/api/getStories/${userId}`);
 //         setStories(response.data.stories);
 //       } catch (error) {
 //         console.error("Error fetching stories:", error);
@@ -151,7 +151,7 @@
 //     formData.append("audio", audioFile);
 
 //     try {
-//       await axios.post(`http://localhost:3000/api/upload_stories/${userId}`, formData, {
+//       await axios.post(`https://insta-server-3e4p.onrender.com/api/upload_stories/${userId}`, formData, {
 //         headers: { "Content-Type": "multipart/form-data" },
 //       });
 //       alert("Post uploaded successfully!");
@@ -294,7 +294,7 @@
 //     // Fetch the user's stories from the backend
 //     const fetchStories = async () => {
 //       try {
-//         const response = await axios.get(`http://localhost:3000/api/getStories/${userId}`);
+//         const response = await axios.get(`https://insta-server-3e4p.onrender.com/api/getStories/${userId}`);
 //         setStories(response.data.stories);
 //       } catch (error) {
 //         console.error("Error fetching stories:", error);
@@ -424,7 +424,7 @@
 //   useEffect(() => {
 //     const fetchStories = async () => {
 //       try {
-//         const response = await axios.get(`http://localhost:3000/api/getStories/${userId}`);
+//         const response = await axios.get(`https://insta-server-3e4p.onrender.com/api/getStories/${userId}`);
 //         setStories(response.data.stories);
 //       } catch (error) {
 //         console.error("Error fetching stories:", error);
@@ -443,20 +443,8 @@
 //     }
 //   }, [currentStoryIndex, stories]);
 
-//   const handleStoryClick = (index) => {
-//     setCurrentStoryIndex(index);
-//   };
-
-//   const nextStory = () => {
-//     setCurrentStoryIndex((prevIndex) => (prevIndex + 1) % stories.length);
-//   };
-
-//   const prevStory = () => {
-//     setCurrentStoryIndex((prevIndex) => (prevIndex - 1 + stories.length) % stories.length);
-//   };
-
 //   const handlePostUpload = async () => {
-//     if (!imageFile || !audioFile) {
+//     if (!imageFile && !audioFile) {
 //       alert("Please select both an image and an audio file.");
 //       return;
 //     }
@@ -467,7 +455,7 @@
 //     formData.append("description", postDescription);
 
 //     try {
-//       await axios.post(`http://localhost:3000/api/upload_stories/${userId}`, formData, {
+//       await axios.post(`https://insta-server-3e4p.onrender.com/api/upload_stories/${userId}`, formData, {
 //         headers: { "Content-Type": "multipart/form-data" },
 //       });
 //       alert("Post uploaded successfully!");
@@ -478,6 +466,18 @@
 //     } catch (error) {
 //       console.error("Error uploading post:", error);
 //     }
+//   };
+
+//   const handleStoryClick = (index) => {
+//     setCurrentStoryIndex(index);
+//   };
+
+//   const nextStory = () => {
+//     setCurrentStoryIndex((prevIndex) => (prevIndex + 1) % stories.length);
+//   };
+
+//   const prevStory = () => {
+//     setCurrentStoryIndex((prevIndex) => (prevIndex - 1 + stories.length) % stories.length);
 //   };
 
 //   return (
@@ -554,8 +554,6 @@
 
 // export default Stories;
 
-// corrected code final1
-
 // import React, { useState, useEffect, useRef } from "react";
 // import axios from "axios";
 // import "./Stories.css";
@@ -572,23 +570,10 @@
 //   const userId = id || 23;
 //   const audioRef = useRef(null);
 
-//   // useEffect(() => {
-//   //   const fetchStories = async () => {
-//   //     try {
-//   //       const response = await axios.get(`http://localhost:3000/api/getStories`);
-//   //       setStories(response.data.stories);
-//   //     } catch (error) {
-//   //       console.error("Error fetching stories:", error);
-//   //     }
-//   //   };
-
-//   //   fetchStories();
-//   // }, [userId]);
-
 //   useEffect(() => {
 //     const fetchStories = async () => {
 //       try {
-//         const response = await axios.get(`http://localhost:3000/api/getStories`);
+//         const response = await axios.get(`https://insta-server-3e4p.onrender.com/api/getStories`);
 //         setStories(response.data.stories);
 
 //         // Find index of story matching the `uniqueId`
@@ -627,7 +612,7 @@
 //     formData.append("description", postDescription);
 
 //     try {
-//       await axios.post(`http://localhost:3000/api/upload_stories/${userId}`, formData, {
+//       await axios.post(`https://insta-server-3e4p.onrender.com/api/upload_stories/${userId}`, formData, {
 //         headers: { "Content-Type": "multipart/form-data" },
 //       });
 //       alert("Post uploaded successfully!");
@@ -720,17 +705,58 @@
 //                 onClick={() => handleStoryClick(index)}
 //               >
 //                 <div className="story-content">
-//                 <img style={{height:"50px" , width:"50px"}} src={story.profilePic} alt="Profile" className="prfile-pic" />
-//                 <span style={{color:"blue" , height:"20px", width:"20px"}}>{story.username}</span>
-//                   {story.image && <img src={story.image} alt="Story" className="story-image" />}
-//                   <h3 className="story-description">{story.description}</h3>
+//                 <img
+//                   className="story_pro_img"
+//                   style={{
+//                     height: "50px",
+//                     width: "50px",
+//                     borderRadius: "50%",
+//                     objectFit: "cover",
+//                   }}
+//                   src={story.profilePic}
+//                   alt={story.username}
+//                 />
+//                 <span
+//                   className="story_pro_img_n"
+//                   style={{ color: "white" }}
+//                 >
+//                   {story.username}
+//                 </span>
+//                 <GiSpeaker  className="speak"/>
+
+//                 <FaPause className="pass" />
+
+//                 <HiDotsHorizontal
+//                   className="dots"
+//                   style={{ color: "white", display: "flex" }}
+//                   size={25}
+//                 />
+//                 <div className="down">
+//                   <input placeholder={`Reply to ${story.username}`}   style={{ color: "white", backgroundColor: "transparent"  , border:"solid 2px white"}}  className="input_reply" type="text" />
+//                 <FontAwesomeIcon   style={{ color: "white", backgroundColor: "transparent" }}  className="heart_ic_d" icon={faRegularHeart} />
+//                 <LuSend style={{background:"transparent" , color:"white"}} />
 //                 </div>
+                  
+//                 {/* Story Image */}
+//                 {story.image && (
+//                   <img
+//                     src={story.image}
+//                     alt="Story"
+//                     className="story-image"
+//                     style={{
+//                       width: "100%",
+//                       height: "100%",
+//                       marginTop: "10px",
+//                     }}
+//                   />
+//                 )}
 //               </div>
-//             ))
-//           ) : (
-//             <p>No stories available.</p>
-//           )}
-//         </div>
+//             </div>
+//           ))
+//         ) : (
+//           <p>No stories available.</p>
+//         )}
+//       </div>
 //         <button onClick={nextStory}>Next</button>
 //       </div>
 
@@ -828,7 +854,7 @@ const Stories = () => {
     const fetchStories = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/getStories`
+          `https://insta-server-3e4p.onrender.com/api/getStories`
         );
         setStories(response.data.stories);
 
@@ -990,7 +1016,7 @@ export default Stories;
 //   useEffect(() => {
 //     const fetchStories = async () => {
 //       try {
-//         const response = await axios.get(`http://localhost:3000/api/getStories/${userId}`);
+//         const response = await axios.get(`https://insta-server-3e4p.onrender.com/api/getStories/${userId}`);
 //         setStories(response.data.stories);
 //       } catch (error) {
 //         console.error("Error fetching stories:", error);
@@ -1021,7 +1047,7 @@ export default Stories;
 //     formData.append("description", postDescription);
 
 //     try {
-//       await axios.post(`http://localhost:3000/api/upload_stories/${userId}`, formData, {
+//       await axios.post(`https://insta-server-3e4p.onrender.com/api/upload_stories/${userId}`, formData, {
 //         headers: { "Content-Type": "multipart/form-data" },
 //       });
 //       alert("Post uploaded successfully!");
@@ -1181,7 +1207,7 @@ export default Stories;
 
 //   const fetchStories = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:3000/api/getStories/${userId}`);
+//       const response = await axios.get(`https://insta-server-3e4p.onrender.com/api/getStories/${userId}`);
 //       setStories(response.data.stories);
 //     } catch (error) {
 //       console.error("Error fetching stories:", error);
@@ -1200,7 +1226,7 @@ export default Stories;
 //     formData.append("description", postDescription);
 
 //     try {
-//       await axios.post(`http://localhost:3000/api/upload_stories/${userId}`, formData, {
+//       await axios.post(`https://insta-server-3e4p.onrender.com/api/upload_stories/${userId}`, formData, {
 //         headers: { "Content-Type": "multipart/form-data" },
 //       });
 

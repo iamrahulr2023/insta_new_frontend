@@ -39,7 +39,7 @@ const Message_p = () => {
 
     const fetchProfileData = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/api/profile_frds/${id}`);
+            const response = await axios.get(`https://insta-server-3e4p.onrender.com/api/profile_frds/${id}`);
             setPosts(response.data.posts || []);
             if (response.data.profilePic) {
                 const { contentType, imageData } = response.data.profilePic;
@@ -56,7 +56,7 @@ const Message_p = () => {
 
     const fetchMessages = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/api/messages/${id}/${loginid}`);
+            const response = await axios.get(`https://insta-server-3e4p.onrender.com/api/messages/${id}/${loginid}`);
             const sortedMessages = response.data.messages.sort(
                 (a, b) => new Date(a.timestamp) - new Date(b.timestamp)
             );
@@ -73,7 +73,7 @@ const Message_p = () => {
         if (!newMessage.trim()) return;
 
         try {
-            const response = await axios.post(`http://localhost:3000/api/message/${id}`, {
+            const response = await axios.post(`https://insta-server-3e4p.onrender.com/api/message/${id}`, {
                 loginid: loginid,
                 content: newMessage,
             });
@@ -87,7 +87,7 @@ const Message_p = () => {
 
     const fetchFollowing = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/api/following_m/${id}`);
+            const response = await axios.get(`https://insta-server-3e4p.onrender.com/api/following_m/${id}`);
             setFollowingUsers(response.data);
             setShowFollowingPopup(true);
         } catch (error) {

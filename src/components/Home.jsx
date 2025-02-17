@@ -71,7 +71,7 @@ const Home = ({ Getid }) => {
     const fetchStories = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/getStories`
+          `https://insta-server-3e4p.onrender.com/api/getStories`
         );
         setStories(response.data.stories);
         console.log("ststtstststst", response.data.stories);
@@ -87,7 +87,7 @@ const Home = ({ Getid }) => {
   const fetchProfileData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/profile_data/${id}`
+        `https://insta-server-3e4p.onrender.com/api/profile_data/${id}`
       );
 
       if (response.data.profilePic) {
@@ -111,7 +111,7 @@ const Home = ({ Getid }) => {
   const fetch_all_profiles = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/all_profile_data"
+        "https://insta-server-3e4p.onrender.com/api/all_profile_data"
       );
       console.log("Fetched users:", response.data); // Ensure _id is present
       setUsers(response.data);
@@ -129,7 +129,7 @@ const Home = ({ Getid }) => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/api/follow", {
+      const response = await axios.post("https://insta-server-3e4p.onrender.com/api/follow", {
         followerId: id, // Current logged-in user's MongoDB `_id`
         followingId: userIdss, // The MongoDB `_id` of the user to follow
       });
@@ -158,7 +158,7 @@ const Home = ({ Getid }) => {
   const fetchLatestPosts = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/latest_posts"
+        "https://insta-server-3e4p.onrender.com/api/latest_posts"
       );
       console.log("Fetched latest posts:", response.data);
       setLatestPosts(response.data);
@@ -176,7 +176,7 @@ const Home = ({ Getid }) => {
   //   }
 
   //   try {
-  //     const response = await axios.post(`http://localhost:3000/api/posts/${postId}/like`, {
+  //     const response = await axios.post(`https://insta-server-3e4p.onrender.com/api/posts/${postId}/like`, {
   //       userId: id, // Use the logged-in user's ID (current user's ID)
   //     });
 
@@ -205,7 +205,7 @@ const Home = ({ Getid }) => {
 
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/posts/${postId}/like`,
+        `https://insta-server-3e4p.onrender.com/api/posts/${postId}/like`,
         {
           userId: id, // Current user ID
           likeAction: !isLiked, // Pass whether the like action is adding or removing
@@ -233,7 +233,7 @@ const Home = ({ Getid }) => {
   //     return;
   //   }
   //   try {
-  //     const response = await axios.post(`http://localhost:3000/api/posts/${postid}/like`, {
+  //     const response = await axios.post(`https://insta-server-3e4p.onrender.com/api/posts/${postid}/like`, {
   //       userId: id, // Current user ID // Pass whether the like action is adding or removing
   //     });
 
@@ -265,7 +265,7 @@ const Home = ({ Getid }) => {
   // console.log(commandToAdd , id ,postid);
   //       try {
   //         // Post to backend
-  //         await axios.post(`http://localhost:3000/api/posts/${postid}/commands`, {
+  //         await axios.post(`https://insta-server-3e4p.onrender.com/api/posts/${postid}/commands`, {
   //           userId :id, // Current user ID
   //           command: commandToAdd, // The new command to add
   //         });
@@ -301,7 +301,7 @@ const Home = ({ Getid }) => {
 
       try {
         // Post to backend
-        await axios.post(`http://localhost:3000/api/posts/${postid}/commands`, {
+        await axios.post(`https://insta-server-3e4p.onrender.com/api/posts/${postid}/commands`, {
           userId: id, // Current user ID
           command: commandToAdd, // The new command to add
         });
@@ -324,7 +324,7 @@ const Home = ({ Getid }) => {
   //   if (!newComment.trim()) return;
 
   //   try {
-  //     const response = await axios.post(`http://localhost:3000/api/posts/${postId}/comments`, {
+  //     const response = await axios.post(`https://insta-server-3e4p.onrender.com/api/posts/${postId}/comments`, {
   //       userId: id, // Current user ID
   //       comment: newComment,
   //     });
@@ -343,7 +343,7 @@ const Home = ({ Getid }) => {
 
   // const fetchComments = async (postId) => {
   //   try {
-  //     const response = await axios.get(`http://localhost:3000/api/posts/${postId}/comments`);
+  //     const response = await axios.get(`https://insta-server-3e4p.onrender.com/api/posts/${postId}/comments`);
   //     setComments((prevState) => ({
   //       ...prevState,
   //       [postId]: response.data.comments,
@@ -422,7 +422,7 @@ const Home = ({ Getid }) => {
 
     try {
       await axios.post(
-        `http://localhost:3000/api/upload_stories/${userId}`,
+        `https://insta-server-3e4p.onrender.com/api/upload_stories/${userId}`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

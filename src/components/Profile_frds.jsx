@@ -29,14 +29,21 @@ const Profile_frds = () => {
   const [username, setUsername] = useState("");
   const [follower_c, setfollowers_count] = useState(0);
   const [following_c, setfollowing_count] = useState(0);
+  const [isFollowing, setIsFollowing] = useState(false);
+  const [followerUsers, setFollowerUsers] = useState([]);
+  const [followingUsers, setFollowingUsers] = useState([]);
+  const [showFollowersPopup, setShowFollowersPopup] = useState(false);
+  const [showFollowingPopup, setShowFollowingPopup] = useState(false);
+
   useEffect(() => {
     fetchProfileData();
+    checkIfFollowing();
   }, []);
 
   const fetchProfileData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/profile_frds/${id}`
+        `https://insta-server-3e4p.onrender.com/api/profile_frds/${id}`
       );
       console.log("summahmmm", response.data);
       setPosts(response.data.posts || []);
@@ -50,6 +57,73 @@ const Profile_frds = () => {
       }
     } catch (error) {
       console.error("Error fetching profile data:", error);
+    }
+  };
+
+  const handleFollow = async () => {
+    try {
+      const response = await axios.post(
+        `https://insta-server-3e4p.onrender.com/api/follow`,
+        {
+          followerId: loginid,
+          followingId: id,
+        }
+      );
+      setIsFollowing(true);
+      setfollowers_count((prevCount) => prevCount + 1);
+    } catch (error) {
+      console.error("Error following user:", error);
+    }
+  };
+
+  const handleUnfollow = async () => {
+    try {
+      const response = await axios.post(
+        `https://insta-server-3e4p.onrender.com/api/unfollow`,
+        {
+          followerId: loginid,
+          followingId: id,
+        }
+      );
+      setIsFollowing(false);
+      setfollowers_count((prevCount) => prevCount - 1);
+    } catch (error) {
+      console.error("Error unfollowing user:", error);
+    }
+  };
+
+  const checkIfFollowing = async () => {
+    try {
+      const response = await axios.get(
+        `https://insta-server-3e4p.onrender.com/api/check-follow/${loginid}/${id}`
+      );
+      setIsFollowing(response.data.isFollowing);
+    } catch (error) {
+      console.error("Error checking follow status:", error);
+    }
+  };
+
+  const fetchFollowers = async () => {
+    try {
+      const response = await axios.get(
+        `https://insta-server-3e4p.onrender.com/api/followers/${id}`
+      );
+      setFollowerUsers(response.data);
+      setShowFollowersPopup(true);
+    } catch (error) {
+      console.error("Error fetching followers:", error);
+    }
+  };
+
+  const fetchFollowing = async () => {
+    try {
+      const response = await axios.get(
+        `https://insta-server-3e4p.onrender.com/api/following/${id}`
+      );
+      setFollowingUsers(response.data);
+      setShowFollowingPopup(true);
+    } catch (error) {
+      console.error("Error fetching following users:", error);
     }
   };
 
@@ -125,7 +199,11 @@ const Profile_frds = () => {
           </div>
           <div className="profile-info">
             <h2>{username}</h2>
-            <button>Following</button>
+            {isFollowing ? (
+              <button onClick={handleUnfollow}>Unfollow</button>
+            ) : (
+              <button onClick={handleFollow}>Follow</button>
+            )}
             <Link to={`/message/${id}/${loginid}`}>
               <button>Message</button>
             </Link>

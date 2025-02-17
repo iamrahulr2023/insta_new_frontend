@@ -83,7 +83,7 @@ const Profile = () => {
   const fetchProfileData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/images/${id}`
+        `https://insta-server-3e4p.onrender.com/api/images/${id}`
       );
       setPosts(response.data.posts || []);
       if (response.data.profilePic) {
@@ -108,7 +108,7 @@ const Profile = () => {
     formData.append("image", file);
     try {
       await axios.post(
-        `http://localhost:3000/api/upload/profile-pic/${id}`,
+        `https://insta-server-3e4p.onrender.com/api/upload/profile-pic/${id}`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -133,10 +133,13 @@ const Profile = () => {
     console.log("summma ", audioFile);
     try {
       // Include the description in the post upload request
-      await axios.post(`http://localhost:3000/api/upload/${id}`, formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-        params: { description: postDescription }, // Send description in query parameters (or body if necessary)
-      });
+      await axios.post(
+        `https://insta-server-3e4p.onrender.com/api/upload/${id}`,
+        formData,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+        }
+      );
       alert("Post uploaded successfully!");
       setShowPopup(false);
       setPostDescription(""); // Reset description after upload
@@ -148,7 +151,9 @@ const Profile = () => {
 
   const fetchProfileData2 = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/user/${id}`);
+      const response = await axios.get(
+        `https://insta-server-3e4p.onrender.com/api/user/${id}`
+      );
       const { profile_bio, username } = response.data;
       setBio(profile_bio || []); // Safely handle missing bio
       setUsername(username);
@@ -175,7 +180,7 @@ const Profile = () => {
     console.log(newBio);
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/update-bio/${id}`,
+        `https://insta-server-3e4p.onrender.com/api/update-bio/${id}`,
         { bio: newBio }
       );
       setBio(response.data.bio); // Update the bio in the UI
@@ -189,7 +194,7 @@ const Profile = () => {
   const fetchFollowing = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/following/${id}`
+        `https://insta-server-3e4p.onrender.com/api/following/${id}`
       );
       console.log(response.data);
       setFollowingUsers(response.data);
@@ -202,7 +207,7 @@ const Profile = () => {
   const fetchFollowers = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/followers/${id}`
+        `https://insta-server-3e4p.onrender.com/api/followers/${id}`
       );
       setFollowersUsers(response.data);
       setShowFollowersPopup(true);

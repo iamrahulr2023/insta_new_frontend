@@ -29,11 +29,7 @@ function Log_in() {
     console.log("handle submit clicked",formData)
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/login", formData, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await axios.post('https://insta-server-3e4p.onrender.com/login', formData);
 
       if (response.status === 200) {
         setMessage("Login successful!");

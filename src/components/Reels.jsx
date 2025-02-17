@@ -24,7 +24,7 @@
 
 //   const fetchMedia = async () => {
 //     try {
-//       const response = await axios.get('http://localhost:3000/api/media');
+//       const response = await axios.get('https://insta-server-3e4p.onrender.com/api/media/');
 //       setMedia(response.data);
 //     } catch (error) {
 //       setError('Could not load media. Please try again later.');
@@ -76,7 +76,7 @@
 //     setError(null);
 
 //     try {
-//       const response = await axios.post('http://localhost:3000/api/upload', formData, {
+//       const response = await axios.post('https://insta-server-3e4p.onrender.com/api/upload', formData, {
 //         headers: {
 //           'Content-Type': 'multipart/form-data',
 //         },
@@ -109,7 +109,7 @@
 //   };
 
 //   const renderMediaItem = (item) => {
-//     const mediaUrl = `http://localhost:3000/api/media/${item._id}`;
+//     const mediaUrl = `https://insta-server-3e4p.onrender.com/api/media/${item._id}`;
 
 //     if (item.type === 'video') {
 //       return (
@@ -168,44 +168,44 @@
 //           )}
 //         </div>
 //         <div className="media-grid">
-//   {media.map(item => (
-//     <div key={item._id} className="media-card">
-//       {item.type === "video" ? (
-//         <video src={mediaUrl} controls autoPlay loop muted className="media-item"></video>
-//       ) : (
-//         <img src={mediaUrl} alt={item.filename} className="media-item" />
-//       )}
-//     </div>
-//   ))}
-// </div>
-// <div className="media-grid">
-//   {media.map(item => (
-//     <div key={item._id} className="media-card">
-//       {item.type === "video" ? (
-//         <video src={mediaUrl} controls autoPlay loop muted className="media-item"></video>
-//       ) : (
-//         <img src={mediaUrl} alt={item.filename} className="media-item" />
-//       )}
-//     </div>
-//   ))}
-// </div>
-
+//           {media.map(item => (
+//             <div key={item._id} className="media-card">
+//               {item.type === "video" ? (
+//                 <video src={mediaUrl} controls autoPlay loop muted className="media-item"></video>
+//               ) : (
+//                 <img src={mediaUrl} alt={item.filename} className="media-item" />
+//               )}
+//             </div>
+//           ))}
+//         </div>
 //       </main>
 //       <div className="media-grid">
-//   {media.map(item => {
-//     const mediaUrl = `http://localhost:3000/api/media/${item._id}`; // Define mediaUrl inside the loop
-
-//     return (
-//       <div key={item._id} className="media-card">
-//         {item.type === "video" ? (
-//           <video src={mediaUrl} controls autoPlay loop muted className="media-item"></video>
-//         ) : (
-//           <img src={mediaUrl} alt={item.filename} className="media-item" />
-//         )}
+//         {media.map(item => (
+//           <div key={item._id} className="media-card">
+//             {item.type === "video" ? (
+//               <video src={mediaUrl} controls autoPlay loop muted className="media-item"></video>
+//             ) : (
+//               <img src={mediaUrl} alt={item.filename} className="media-item" />
+//             )}
+//           </div>
+//         ))}
 //       </div>
-//     );
-//   })}
-// </div>
+
+//       <div className="media-grid">
+//         {media.map(item => {
+//           const mediaUrl = `https://insta-server-3e4p.onrender.com/api/media/${item._id}`; // Define mediaUrl inside the loop
+
+//           return (
+//             <div key={item._id} className="media-card">
+//               {item.type === "video" ? (
+//                 <video src={mediaUrl} controls autoPlay loop muted className="media-item"></video>
+//               ) : (
+//                 <img src={mediaUrl} alt={item.filename} className="media-item" />
+//               )}
+//             </div>
+//           );
+//         })}
+//       </div>
 
 //     </div>
 //   );
@@ -241,7 +241,7 @@
 
 //   const fetchMedia = async () => {
 //     try {
-//       const response = await axios.get('http://localhost:3000/api/media');
+//       const response = await axios.get('https://insta-server-3e4p.onrender.com/api/media/');
 //       setMedia(response.data);
 //     } catch (error) {
 //       setError('Could not load media. Please try again later.');
@@ -293,7 +293,7 @@
 //     setError(null);
 
 //     try {
-//       const response = await axios.post('http://localhost:3000/api/upload', formData, {
+//       const response = await axios.post('https://insta-server-3e4p.onrender.com/api/upload', formData, {
 //         headers: {
 //           'Content-Type': 'multipart/form-data',
 //         },
@@ -326,7 +326,7 @@
 //   };
 
 //   const renderMediaItem = (item) => {
-//     const mediaUrl = `http://localhost:3000/api/media/${item._id}`;
+//     const mediaUrl = `https://insta-server-3e4p.onrender.com/api/media/${item._id}`;
 
 //     if (item.type === 'video') {
 //       return (
@@ -422,7 +422,7 @@
 
 //   const fetchMedia = async () => {
 //     try {
-//       const response = await axios.get('http://localhost:3000/api/media/');
+//       const response = await axios.get('https://insta-server-3e4p.onrender.com/api/media/');
 //       setMedia(response.data);
 //     } catch (error) {
 //       setError('Could not load media. Please try again later.');
@@ -439,7 +439,15 @@
 //         return;
 //       }
 
-//       const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'video/mp4', 'video/webm', 'video/quicktime'];
+//       const allowedTypes = [
+//         'image/jpeg',
+//         'image/png',
+//         'image/gif',
+//         'video/mp4',
+//         'video/webm',
+//         'video/quicktime'
+//       ];
+
 //       if (!allowedTypes.includes(file.type)) {
 //         setError('Invalid file type. Please select an image (JPEG, PNG, GIF) or video (MP4, WEBM, MOV).');
 //         event.target.value = null;
@@ -464,17 +472,28 @@
 //     setError(null);
 
 //     try {
-//       const response = await axios.post('http://localhost:3000/api/upload', formData, {
+//       const response = await axios.post('https://insta-server-3e4p.onrender.com/api/upload', formData, {
 //         headers: { 'Content-Type': 'multipart/form-data' },
 //       });
 
-//       setMedia((prevMedia) => [response.data.media, ...prevMedia]);
+//       setMedia(prevMedia => [response.data.media, ...prevMedia]);
 //       setSelectedFile(null);
-//       document.querySelector('input[type="file"]').value = null;
+
+//       // Reset file input
+//       const fileInput = document.querySelector('input[type="file"]');
+//       if (fileInput) fileInput.value = null;
+
 //     } catch (error) {
 //       let errorMessage = 'Error uploading file. Please try again.';
-//       if (error.response) errorMessage = error.response.data.message || errorMessage;
-//       else if (error.request) errorMessage = 'Server not responding. Please try again later.';
+
+//       if (error.response) {
+//         // Server responded with an error
+//         errorMessage = error.response.data.message || errorMessage;
+//       } else if (error.request) {
+//         // Request was made but no response
+//         errorMessage = 'Server not responding. Please try again later.';
+//       }
+
 //       setError(errorMessage);
 //       console.error('Upload error:', error);
 //     } finally {
@@ -483,7 +502,7 @@
 //   };
 
 //   const renderMediaItem = (item, index) => {
-//     const mediaUrl = `http://localhost:3000/api/media/${item._id}`;
+//     const mediaUrl = `https://insta-server-3e4p.onrender.com/api/media/${item._id}`;
 
 //     if (item.type === 'video') {
 //       return (
@@ -615,7 +634,7 @@
 
 //   const fetchMedia = async () => {
 //     try {
-//       const response = await axios.get("http://localhost:3000/api/media/");
+//       const response = await axios.get("https://insta-server-3e4p.onrender.com/api/media/");
 //       setMedia(response.data);
 //       console.log("eeeeeeeeeeeeeeee", response.data);
 //     } catch (error) {
@@ -668,7 +687,7 @@
 
 //     try {
 //       const response = await axios.post(
-//         `http://localhost:3000/api/upload_reel/${id}`,
+//         `https://insta-server-3e4p.onrender.com/api/upload_reel/${id}`,
 //         formData,
 //         {
 //           headers: { "Content-Type": "multipart/form-data" },
@@ -692,7 +711,7 @@
 //   };
 
 //   const renderMediaItem = (item, index) => {
-//     const mediaUrl = `http://localhost:3000/api/media/${item._id}`;
+//     const mediaUrl = `https://insta-server-3e4p.onrender.com/api/media/${item._id}`;
 
 //     if (item.type === "video") {
 //       return (
@@ -791,7 +810,7 @@
 // console.log("ffffffffffffff",postId);
 //     try {
 //         const response = await axios.post(
-//             `http://localhost:3000/api/posts_reels/${postId}/like`
+//             `https://insta-server-3e4p.onrender.com/api/posts_reels/${postId}/like`
 //         );
 
 //         const { likesCount } = response.data;
@@ -969,7 +988,7 @@
 
 //   const fetchMedia = async () => {
 //     try {
-//       const response = await axios.get("http://localhost:3000/api/media/");
+//       const response = await axios.get("https://insta-server-3e4p.onrender.com/api/media/");
 //       setMedia(response.data);
 //       console.log("eeeeeeeeeeeeeeee", response.data);
 //     } catch (error) {
@@ -1022,7 +1041,7 @@
 
 //     try {
 //       const response = await axios.post(
-//         `http://localhost:3000/api/upload_reel/${id}`,
+//         `https://insta-server-3e4p.onrender.com/api/upload_reel/${id}`,
 //         formData,
 //         {
 //           headers: { "Content-Type": "multipart/form-data" },
@@ -1046,7 +1065,7 @@
 //   };
 
 //   const renderMediaItem = (item, index) => {
-//     const mediaUrl = `http://localhost:3000/api/media/${item._id}`;
+//     const mediaUrl = `https://insta-server-3e4p.onrender.com/api/media/${item._id}`;
 
 //     if (item.type === "video") {
 //       return (
@@ -1142,26 +1161,26 @@
 //   const handleLikeToggle = async (postId) => {
 //     console.log("Liking post:", postId);
 //     if (!postId) return;
-//     console.log("ffffffffffffff", postId);
+// console.log("ffffffffffffff",postId);
 //     try {
-//       const response = await axios.post(
-//         `http://localhost:3000/api/posts_reels/${postId}/like`
-//       );
+//         const response = await axios.post(
+//             `https://insta-server-3e4p.onrender.com/api/posts_reels/${postId}/like`
+//         );
 
-//       const { likesCount } = response.data;
+//         const { likesCount } = response.data;
 
-//       // Update state with new like count
-//       setLikedPosts((prevState) => ({
-//         ...prevState,
-//         [postId]: {
-//           liked: true,
-//           likesCount,
-//         },
-//       }));
+//         // Update state with new like count
+//         setLikedPosts((prevState) => ({
+//             ...prevState,
+//             [postId]: {
+//                 liked: true,
+//                 likesCount,
+//             },
+//         }));
 //     } catch (error) {
-//       console.error("Error liking post:", error);
+//         console.error("Error liking post:", error);
 //     }
-//   };
+// };
 
 //   return (
 //     <div className="App">
@@ -1238,8 +1257,8 @@
 //                     : faRegularHeart
 //                 }
 //               /> */}
-//                 <span className="like-count_reels">
-//                   {likedPosts[item._id]?.likesCount || item.likesCount}
+//                 <span className="like-count">
+//                   {likedPosts[item._id]?.likesCount || item.likesCount} likes
 //                 </span>
 //                 <FontAwesomeIcon
 //                   style={{
@@ -1266,7 +1285,6 @@
 // }
 
 // export default Reels;
-
 
 // import React, { useState, useEffect, useRef } from "react";
 // import axios from "axios";
@@ -1328,7 +1346,7 @@
 
 //   const fetchMedia = async () => {
 //     try {
-//       const response = await axios.get("http://localhost:3000/api/media/");
+//       const response = await axios.get("https://insta-server-3e4p.onrender.com/api/media/");
 //       setMedia(response.data);
 //       console.log("eeeeeeeeeeeeeeee", response.data);
 //     } catch (error) {
@@ -1381,7 +1399,7 @@
 
 //     try {
 //       const response = await axios.post(
-//         `http://localhost:3000/api/upload_reel/${id}`,
+//         `https://insta-server-3e4p.onrender.com/api/upload_reel/${id}`,
 //         formData,
 //         {
 //           headers: { "Content-Type": "multipart/form-data" },
@@ -1405,7 +1423,7 @@
 //   };
 
 //   const renderMediaItem = (item, index) => {
-//     const mediaUrl = `http://localhost:3000/api/media/${item._id}`;
+//     const mediaUrl = `https://insta-server-3e4p.onrender.com/api/media/${item._id}`;
 
 //     if (item.type === "video") {
 //       return (
@@ -1504,7 +1522,7 @@
 //     console.log("ffffffffffffff", postId);
 //     try {
 //       const response = await axios.post(
-//         `http://localhost:3000/api/posts_reels/${postId}/like`
+//         `https://insta-server-3e4p.onrender.com/api/posts_reels/${postId}/like`
 //       );
 
 //       const { likesCount } = response.data;
@@ -1600,7 +1618,7 @@
   
 //       try {
 //         // Send the command to the backend
-//         await axios.post(`http://localhost:3000/api/reels/${postId}/commands`, {
+//         await axios.post(`https://insta-server-3e4p.onrender.com/api/reels/${postId}/commands`, {
 //           command: commandToAdd,
 //         });
   
@@ -1733,7 +1751,7 @@ function Reels() {
 
   const fetchMedia = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/media/");
+      const response = await axios.get("https://insta-server-3e4p.onrender.com/api/media/");
       setMedia(response.data);
       console.log("Media data:", response.data);
     } catch (error) {
@@ -1786,7 +1804,7 @@ function Reels() {
 
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/upload_reel/${id}`,
+        `https://insta-server-3e4p.onrender.com/api/upload_reel/${id}`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -1810,7 +1828,7 @@ function Reels() {
   };
 
   const renderMediaItem = (item, index) => {
-    const mediaUrl = `http://localhost:3000/api/media/${item._id}`;
+    const mediaUrl = `https://insta-server-3e4p.onrender.com/api/media/${item._id}`;
 
     if (item.type === "video") {
       return (
@@ -1869,7 +1887,7 @@ function Reels() {
     
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/posts_reels/${postId}/like`
+        `https://insta-server-3e4p.onrender.com/api/posts_reels/${postId}/like`
       );
 
       const { likesCount } = response.data;
@@ -1899,7 +1917,7 @@ function Reels() {
 
       try {
         // Send the command to the backend
-        await axios.post(`http://localhost:3000/api/reels/${postId}/commands`, {
+        await axios.post(`https://insta-server-3e4p.onrender.com/api/reels/${postId}/commands`, {
           command: commandToAdd,
         });
 
